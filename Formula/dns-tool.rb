@@ -1,4 +1,4 @@
-class DnsClientTool < Formula
+class DnsTool < Formula
   desc "DNS client command line tool"
   homepage "https://github.com/mathzimu/dns-client-tool"
 
@@ -14,11 +14,11 @@ class DnsClientTool < Formula
     system "go", "build",
            "-ldflags=-s -w",
            "-trimpath",
-           "-o", "dns-client-tool"
-    bin.install "dns-client-tool"
+           "-o", "dns-tool"
+    bin.install "dns-tool"
   end
 
   test do
-    system "#{bin}/dns-client-tool", "--help"
+    system "#{bin}/dns-tool", "--help"
   end
 end

@@ -4,7 +4,13 @@ Homebrew formula for [dns-client-tool](https://github.com/mathzimu/dns-client-to
 
 ## Install
 
+### From local path
+```bash
+brew install --formula Formula/dns-tool.rb
+```
+
+### From tap
 ```bash
 brew tap mathzimu/dns-tool
-brew install dns-client-tool
+brew install dns-tool
 ```
