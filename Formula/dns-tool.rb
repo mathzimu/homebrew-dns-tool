@@ -27,6 +27,13 @@ class DnsTool < Formula
     SHELL
   end
 
+  service do
+    run [opt_bin/"dns-server"]
+    keep_alive true
+    log_path var/"log/dns-server.log"
+    error_log_path var/"log/dns-server.log"
+  end
+
   test do
     assert_match "Usage", shell_output("#{bin}/dns-server --help")
   end
