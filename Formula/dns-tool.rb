@@ -28,6 +28,6 @@ class DnsTool < Formula
   end
 
   test do
-    assert_match "usage", shell_output("#{bin}/dns-client --help 2>&1", 1)
+    assert_match "Usage", shell_output("#{bin}/dns-server --help")
   end
 end
